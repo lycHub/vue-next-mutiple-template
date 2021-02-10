@@ -1,5 +1,5 @@
 import {parallel, series} from "gulp";
-import {clean, compile, copyPublic, image, script, style, template} from "./tasks/common";
+import {clean, compile, image} from "./tasks/common";
 import {server, watchSrc} from "./tasks/server";
 
 /*
@@ -8,7 +8,7 @@ import {server, watchSrc} from "./tasks/server";
 * */
 const start = series(clean, compile, parallel(watchSrc, server));
 
-const build = series(clean, parallel(template, script, style, copyPublic, image));
+const build = series(clean, parallel(compile, image));
 
 
 

@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV || 'development',
   entry: {
     home: './src/pages/home/index.ts',
     about: './src/pages/about/index.ts'

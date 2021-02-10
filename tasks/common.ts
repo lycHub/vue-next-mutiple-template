@@ -23,8 +23,9 @@ function template() {
 
 
 function style() {
+  const outputStyle = process.env.NODE_ENV === 'development' ? 'expanded' : 'compressed';
   return src(watchFilePaths.styles, { base: 'src' })
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(sass({ outputStyle }).on('error', sass.logError))
     .pipe(dest('dist'))
 }
 
