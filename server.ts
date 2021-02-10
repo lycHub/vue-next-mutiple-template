@@ -4,7 +4,7 @@ const PORT = 4200;
 app.use(express.static('dist'));
 
 app.use((req, res) => {
-  res.redirect(301, '/home.html');
+  res.redirect(301, '/pages/home');
 });
 
 app.listen(PORT, () => {

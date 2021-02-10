@@ -1,4 +1,4 @@
-import {createApp} from "@vue/runtime-dom";
+import {createApp} from "vue";
 
 createApp({
   name: 'About',
