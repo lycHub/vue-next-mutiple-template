@@ -1,6 +1,10 @@
-import { createApp } from 'vue';
-import Main from './main';
+import {createApp} from "@vue/runtime-dom";
 
-createApp(Main).mount('#about');
-
-
+createApp({
+  name: 'About',
+  setup() {
+    return {
+      title: 'About working!'
+    }
+  }
+}).mount('#about');
