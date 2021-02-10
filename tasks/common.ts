@@ -39,7 +39,7 @@ function image() {
     .pipe(dest('dist'))
 }
 
-const compile = parallel(template, script, style, image);
+const compile = parallel(template, script, style, copyPublic);
 
 
 export { clean, template, script, style, copyPublic, image, compile }

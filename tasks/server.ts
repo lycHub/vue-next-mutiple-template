@@ -13,9 +13,10 @@ function server() {
   browserSync.init({
     files: 'dist',
     open: false,
-    port: 4000,
+    notify: false,
+    port: 4002,
     server: {
-      baseDir: ['dist']
+      baseDir: ['dist', 'src']
     }
   }, (err, bsInstance) => {
     // @ts-ignore
