@@ -4,7 +4,7 @@ createApp({
   name: 'Home',
   setup() {
     return {
-      title: 'Home working!'
+      title: 'Home working server!'
     }
   }
 }).mount('#home');

@@ -1,4 +1,4 @@
-import { src, dest } from "gulp";
+import { src, dest, parallel } from "gulp";
 import {watchFilePaths} from "./config";
 import sass from 'gulp-sass';
 import del from 'del';
@@ -39,5 +39,7 @@ function image() {
     .pipe(dest('dist'))
 }
 
+const compile = parallel(template, script, style, image);
 
-export { clean, template, script, style, copyPublic, image }
+
+export { clean, template, script, style, copyPublic, image, compile }

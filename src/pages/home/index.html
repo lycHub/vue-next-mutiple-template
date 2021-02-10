@@ -8,8 +8,9 @@
   <script src="./index.js" defer></script>
 </head>
 <body>
-<div id="home">
-  <h2>{{ title }}</h2>
+<div id="home" v-cloak>
+  <h2 class="title">{{ title }}</h2>
+  <a href="../about">to about</a>
 </div>
 </body>
 </html>
